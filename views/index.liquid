@@ -1,14 +1,76 @@
-{% render 'partials/head.liquid' %}
+<div class="container" id="flip-container">
+  <!-- Front Page -->
+  <div class="page front">
+    <header>
+      <h1>{{ person.name }}</h1>
+      <img src="./assets/pfp.jpg.jpg" alt="" width="800" height="800">
+    </header>
+    <main>
+      <h3>HvA FDND 24/25</h3>
+      <p>Amsterdam</p>
+    </main>
+    <footer>
+      <a href="mailto:stellaclough@gmail.com"><i class="fa-regular fa-envelope" style="color: #bd1f56;"></i></a>
+      <a href="https://github.com/misspastelwitch"><i class="fa-brands fa-github" style="color: #bd1f56;"></i></a>
+      <a href="https://www.linkedin.com/in/stella-clough-7aa2491b2/"><i class="fa-brands fa-linkedin" style="color: #bd1f56;"></i></a>
+    </footer>
+    <button class="flip-button" onclick="flip()">
 
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
+      <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 8v-2a2 2 0 0 1 2 -2h2"></path>
+        <path d="M4 16v2a2 2 0 0 0 2 2h2"></path>
+        <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
+        <path d="M16 20h2a2 2 0 0 0 2 -2v-2"></path>
+      </svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M15 19v-2a2 2 0 0 1 2 -2h2"></path>
+        <path d="M15 5v2a2 2 0 0 0 2 2h2"></path>
+        <path d="M5 15h2a2 2 0 0 1 2 2v2"></path>
+        <path d="M5 9h2a2 2 0 0 0 2 -2v-2"></path>
+      </svg>
+    </button>
+  </div>
 
-  <p>{{ person.name }}</p>
+  <div class="page back">
+    <header>
+    <h1>What I do</h1>
+    </header>
+    <main>
+      <h3>Hiervoor</h3>
+      <p>Ik ben 22 jaar, en kom oorspronkelijk uit Australie. Hiervoor studeerde ik Taalwetenschap op de UU.</p>
+      <h3>Nu</h3>
+      <p>Ik hou van reizen, andere culturen zien en talen leren. Ook hou ik van koken! </p>
+    </main>
+    <footer>
+      <a href="mailto:stellaclough@gmail.com"><i class="fa-regular fa-envelope" style="color: #bd1f56;"></i></a>
+      <a href="https://github.com/misspastelwitch"><i class="fa-brands fa-github" style="color: #bd1f56;"></i></a>
+      <a href="https://www.linkedin.com/in/stella-clough-7aa2491b2/"><i class="fa-brands fa-linkedin" style="color: #bd1f56;"></i></a>
+    </footer>
+    <button class="flip-button" onclick="flip()">
+      <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <title>Wijzig layout</title>
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 8v-2a2 2 0 0 1 2 -2h2"></path>
+        <path d="M4 16v2a2 2 0 0 0 2 2h2"></path>
+        <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
+        <path d="M16 20h2a2 2 0 0 0 2 -2v-2"></path>
+      </svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M15 19v-2a2 2 0 0 1 2 -2h2"></path>
+        <path d="M15 5v2a2 2 0 0 0 2 2h2"></path>
+        <path d="M5 15h2a2 2 0 0 1 2 2v2"></path>
+        <path d="M5 9h2a2 2 0 0 0 2 -2v-2"></path>
+      </svg>
+    </button>
+  </div>
+</div>
 
-  <footer></footer>
-</article>
-
+<script>
+  function flip() {
+    document.getElementById('flip-container').classList.toggle('flip');
+  }
+</script>
 {% render 'partials/foot.liquid' %}
